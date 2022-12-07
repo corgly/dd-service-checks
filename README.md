@@ -20,9 +20,9 @@ docker-compose up -d
 
 3. Create the different monitors by importing their JSON definition in DD (see an example below):
 
-![](https://p-qkfgo2.t2.n0.cdn.getcloudapp.com/items/8LugJjo1/2dbbee64-b611-4795-840c-89d48b52d346.gif?v=1198d5065b8503cdf9331a377f9dcef7)
+![alt text](https://p-qkfgo2.t2.n0.cdn.getcloudapp.com/items/8LugJjo1/2dbbee64-b611-4795-840c-89d48b52d346.gif)
 
-> Make sure to create these monitors almost at the same time so that evaluations occur at the same time
+> Make sure to create these monitors at the same time so that evaluations also occur at the same time
 
 4. Start submitting data to DD by running:
 
