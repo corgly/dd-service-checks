@@ -1,0 +1,22 @@
+{
+    "name": "[type:metric][cluster alert] 90% of services in a given region are in critical state",
+    "type": "query alert",
+    "query": "min(last_2m):(sum:playground.ping.critical{*} by {region} / (sum:playground.ping.critical{*} by {region} + sum:playground.ping.ok{*} by {region})) * 100 >= 90",
+    "message": "dummy",
+    "tags": [],
+    "options": {
+        "thresholds": {
+            "critical": 90
+        },
+        "notify_audit": false,
+        "require_full_window": false,
+        "notify_no_data": true,
+        "renotify_interval": 0,
+        "include_tags": true,
+        "new_group_delay": 60,
+        "no_data_timeframe": 2,
+        "silenced": {}
+    },
+    "priority": null,
+    "restricted_roles": null
+}

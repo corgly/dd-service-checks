@@ -1,0 +1,22 @@
+{
+    "name": "[type:metric][check alert] Service in critical state for more than 2 minutes",
+    "type": "query alert",
+    "query": "min(last_2m):avg:playground.ping.critical{*} by {service} >= 1",
+    "message": "dummy",
+    "tags": [],
+    "options": {
+        "thresholds": {
+            "critical": 1
+        },
+        "notify_audit": false,
+        "require_full_window": false,
+        "notify_no_data": true,
+        "renotify_interval": 0,
+        "include_tags": true,
+        "new_group_delay": 60,
+        "no_data_timeframe": 4,
+        "silenced": {}
+    },
+    "priority": null,
+    "restricted_roles": null
+}
